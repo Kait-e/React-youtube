@@ -1,27 +1,27 @@
-import './App.css';
-import ExpenseItem from './components/ExpenseItem';
+import './App.css'
+import Expenses from './components/Expenses.jsx'
 
-const App = () => {
+function App() {
   const expenses = [
   {
     date: new Date(2024, 10, 12),
     title: 'New book',
-    price: 49.99
+    price: 49.99,
+    id: 1
   },
   {
     date: new Date(2024, 10, 12),
     title: 'new plushie',
-    price: 39.99
+    price: 39.99,
+    id: 2
   }
 ]
 
-
   return (
       <div className="App">
-        <ExpenseItem data = {expenses[0]}/>
-        <ExpenseItem data = {expenses[1]}/>
+        <Expenses dataMain={expenses} />
       </div>
-    );
+    )
 }
 
 export default App;
