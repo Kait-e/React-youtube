@@ -2,11 +2,25 @@ import './App.css';
 import ExpenseItem from './components/ExpenseItem';
 
 const App = () => {
-    return (
-        <div className="App">
-            <ExpenseItem/>
-            <ExpenseItem/>
-        </div>
+  const expenses = [
+  {
+    date: new Date(2024, 10, 12),
+    title: 'New book',
+    price: 49.99
+  },
+  {
+    date: new Date(2024, 10, 12),
+    title: 'new plushie',
+    price: 39.99
+  }
+]
+
+
+  return (
+      <div className="App">
+        <ExpenseItem data = {expenses[0]}/>
+        <ExpenseItem data = {expenses[1]}/>
+      </div>
     );
 }
 
