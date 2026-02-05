@@ -1,27 +1,32 @@
 import './App.css'
 import Expenses from './components/Expenses/Expenses.jsx'
+import NewExpense from "./components/NewExpense/NewExpense.jsx"
 
 function App() {
-  const expenses = [
-  {
-    date: new Date(2024, 10, 12),
-    title: 'New book',
-    price: 49.99,
-    id: 1
-  },
-  {
-    date: new Date(2024, 10, 12),
-    title: 'new plushie',
-    price: 39.99,
-    id: 2
+  const expenses = 
+  [
+    {
+      date : new Date(2026, 0, 10),
+      title : 'New Book',
+      price : 25.99
+    },
+    {
+      date : new Date(2026, 0, 5),
+      title : 'New Plush',
+      price : 29.99
+    }
+  ]
+  const addExpenseHanlder = (expense) => {
+    console.log('app.jsx data')
+    console.log(expense)
   }
-]
 
   return (
-      <div className="App">
-        <Expenses dataMain={expenses} />
-      </div>
-    )
+    <div className='app'>
+      <NewExpense onAddExpense={addExpenseHanlder}/>
+      <Expenses dataMain={expenses}/>
+    </div>
+  )
 }
 
-export default App;
+export default App
