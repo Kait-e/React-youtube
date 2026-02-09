@@ -8,6 +8,9 @@ const NewExpense = (props) => {
         }
         props.onAddExpense(expenseData)
     }
+    
+    console.log(props)
+
     return(
         <div className="new-expense">
             <ExpenseForm onSaveExpenseData={saveExpenseDataHanlder}/>
